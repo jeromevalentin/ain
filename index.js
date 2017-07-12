@@ -395,6 +395,24 @@ SysLogger.prototype.error = function() {
 SysLogger.prototype.debug = function() {
     this.formatAndSend(arguments, Severity.debug);
 };
+/**
+ * Send log message with emerg severity.
+ */
+SysLogger.prototype.emergency = function() {
+    this.formatAndSend(arguments, Severity.emerg);
+};
+/**
+ * Send log message with alert severity.
+ */
+SysLogger.prototype.alert = function() {
+    this.formatAndSend(arguments, Severity.alert);
+};
+/**
+ * Send log message with crit severity.
+ */
+SysLogger.prototype.critical = function() {
+    this.formatAndSend(arguments, Severity.crit);
+};
 
 /**
  * Log object with `util.inspect` with notice severity
